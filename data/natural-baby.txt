@@ -1,0 +1,310 @@
+Name: Ronit Dholwani
+
+Location: Vadodara, Gujarat, India
+
+Professional Title:
+Android Developer | Java & Kotlin Developer | UI/UX & Creative Tech Enthusiast
+
+Introduction:
+Ronit Dholwani is a passionate Android Developer and BCA graduate with hands-on experience in building modern Android applications using Java, Kotlin, Jetpack Compose, Firebase, and XML. He enjoys transforming ideas into practical and user-friendly digital experiences by combining software development with creative problem solving.
+
+His journey in technology started with curiosity about how software works and how applications solve real-world problems. Over time, he explored Android development, UI/UX design, graphical designing, digital branding, SEO optimization, and backend integration while continuously improving both technical and creative skills.
+
+He has worked on freelance Android applications, internship projects, desktop applications, Firebase integrations, and modern mobile UI development. Alongside development, he also gained practical experience in digital marketing, event organizing, branding, and content creation.
+
+Education:
+Bachelor of Computer Applications (BCA)
+The Maharaja Sayajirao University of Baroda
+CGPA: 7.67
+
+Technical Skills:
+
+Programming Languages:
+
+* Java
+* Kotlin
+* C
+* C++
+* Python
+* JavaScript
+* SQL
+
+Mobile Development:
+
+* Android Studio
+* Java Android Development
+* Kotlin Android Development
+* Jetpack Compose
+* XML Layout Design
+* Firebase Integration
+* ROOM Database
+* Responsive Mobile UI Design
+
+Web Development:
+
+* React
+* Tailwind CSS
+* HTML
+* CSS
+* JavaScript
+
+Database & Backend:
+
+* Firebase Firestore
+* Firebase Realtime Database
+* Firebase Authentication
+* MySQL
+* JDBC
+* Hibernate
+* JPA
+* DBMS
+* SQL Queries
+
+Design & Creative Tools:
+
+* Adobe Photoshop
+* Adobe Illustrator
+* Canva
+* UI/UX Design
+* Social Media Design
+
+Marketing & SEO:
+
+* SEO Optimization
+* Google Business Profile Optimization
+* Social Media Marketing
+* Meta Ads
+* Backlink SEO
+* Branding & Promotion
+
+Professional Skills:
+
+* Problem Solving
+* Team Coordination
+* Requirement Analysis
+* Client Communication
+* Event Management
+* Creative Thinking
+* Public Engagement
+
+Experience:
+
+1. Mobile App Developer Intern – Corpax India Pvt. Ltd.
+
+Role:
+Android Developer Intern
+
+Work:
+
+* Built a complete Android E-Commerce application using Kotlin and Jetpack Compose
+* Implemented Firebase Authentication, Firestore Database, and Realtime Database
+* Designed responsive and modern mobile UI components
+* Learned scalable application architecture and clean app structure
+* Improved understanding of Firebase ecosystem and backend integration
+
+Technologies Used:
+Kotlin, Jetpack Compose, Firebase, Firestore, Realtime Database
+
+2. Android App Developer – Freelance Project
+
+Client:
+Hariesh Sitlanii
+
+Duration:
+December 2024 – January 2026
+
+Work:
+
+* Developed 3 Android applications based on numerology concepts and business requirements
+* Implemented custom logic covering 50+ numerology calculation rules
+* Generated accurate numerology reports and calculations
+* Designed clean and user-friendly interfaces
+* Integrated Firebase for cloud data handling and backend support
+* Worked directly with client for requirement analysis, testing, and delivery
+* Converted manual workflows into digital solutions
+
+Technologies Used:
+Java, XML, Firebase Firestore
+
+3. Organizing Team Member – Design & Marketing
+
+Organization:
+Ecell FOS
+
+Duration:
+August 2025 – December 2025
+
+Work:
+
+* Worked as part of organizing team for entrepreneurship programs associated with E-Cell IIT Bombay
+* Designed posters, banners, flyers, pamphlets, and social media creatives
+* Assisted in event management, marketing, public engagement, and coordination activities
+* Contributed to startup and entrepreneurship awareness initiatives
+
+Skills Used:
+Design, Marketing, Team Coordination, Event Management
+
+4. Android App Developer Intern
+
+Organization:
+The Maharaja Sayajirao University of Baroda (FOSSIP Internship)
+
+Duration:
+May 2025 – June 2025
+
+Work:
+
+* Learned core Android App Development using Java and Android Studio
+* Developed beginner-to-intermediate Android applications
+* Built Calculator App, Paint App, and Contacts App
+* Explored Android architecture, activities, intents, and layouts
+* Worked with CRUD operations and cloud/database integration
+* Implemented ROOM Database for local storage management
+* Improved debugging and application development skills
+
+Technologies Used:
+Java, Kotlin, Android Studio, ROOM Database
+
+5. Technical Support Assistant
+
+Organization:
+Pro-Tech Computer Education
+
+Duration:
+September 2023 – August 2024
+
+Work:
+
+* Improved client social media profiles and engagement by 40%
+* Designed 20+ social media posts and branding creatives
+* Edited and optimized 30+ recorded course videos
+* Worked on digital branding and online visibility strategies
+
+Skills Used:
+Graphic Designing, SEO, Social Media Marketing, Branding
+
+Projects:
+
+1. Numerology Applications
+
+Description:
+Developed 3 Android applications based on numerology concepts and business requirements. The applications automate manual numerology calculations and generate detailed reports using custom logic systems.
+
+Features:
+
+* 50+ numerology rules implemented
+* Automated report generation
+* Firebase backend integration
+* User-friendly interface design
+* Business workflow digitization
+
+Technologies:
+Java, XML, Firebase Firestore
+
+2. E-Commerce Application
+
+Description:
+Built a complete Android E-Commerce application during internship at Corpax India Pvt. Ltd. using modern Android development technologies.
+
+Features:
+
+* Firebase Authentication
+* Product data management
+* Firestore integration
+* Realtime Database integration
+* Modern responsive UI using Jetpack Compose
+
+Technologies:
+Kotlin, Jetpack Compose, Firebase
+
+3. Contacts Application
+
+Description:
+Developed a contact management Android application with offline local data storage support.
+
+Features:
+
+* CRUD operations
+* Offline data storage
+* Modern UI
+* Contact management system
+
+Technologies:
+Kotlin, Jetpack Compose, ROOM Database
+
+4. Scientific Calculator Application
+
+Description:
+Built a scientific calculator Android application with responsive modern UI and mathematical operations support.
+
+Features:
+
+* Scientific calculations
+* Interactive UI
+* Responsive design
+* State management
+
+Technologies:
+Kotlin, Jetpack Compose
+
+5. Simple Paint Application
+
+Description:
+Developed a basic Android drawing and paint application for practicing graphics and touch handling concepts.
+
+Features:
+
+* Drawing canvas
+* Brush functionality
+* Touch interaction
+* Custom drawing system
+
+Technologies:
+Java, XML
+
+6. Java Desktop Applications
+
+Projects:
+
+* Banking Management System
+* Desktop Contacts Management Application
+
+Description:
+Developed Java desktop applications while learning backend integration and database management concepts.
+
+Features:
+
+* CRUD operations
+* Authentication systems
+* Database connectivity
+* Object-relational mapping
+* Data management systems
+
+Technologies:
+Java, JDBC, JPA, Hibernate, Spring GUI, MySQL
+
+Certifications & Achievements:
+
+* Mobile App Developer Internship Certificate – Corpax India Pvt. Ltd.
+* FOSSIP Internship Certification – Android App Development
+* Experience Letter – Pro-Tech Computer Education
+* Certified in Graphical Design & Digital Marketing with A+ Grade
+* 1st Position – SustainIT Open House, MSU Baroda (2024)
+* 1st Position – State Level Tech Fest VYOM, SVIT Vasad (2024)
+* Participation – Eureka Pitch Battle (2025)
+* Participation – IoT Workshop organized by Department of Computer Applications, MSU Baroda
+* Participation – Hands-on Workshop on Cyber Security organized by Department of Computer Applications, MSU Baroda
+
+Interests:
+
+* Android Development
+* Mobile UI/UX Design
+* Firebase Backend Systems
+* Creative Designing
+* AI Integration
+* Modern Web Technologies
+* Real-World Software Solutions
+* Entrepreneurship & Startup Ecosystem
+
+Career Objective:
+To work in an environment where I can apply my technical and creative skills to build meaningful software solutions, continuously learn modern technologies, and grow as a professional developer through practical experiences and challenging projects.
