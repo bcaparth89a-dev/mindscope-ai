@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { getEmbedding } from "@/lib/embedding";
+
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -24,37 +24,8 @@ export async function POST(req: Request) {
     }
 
     // Create embedding for question
-    const queryEmbedding =
-      await getEmbedding(message);
+    const context = "";
 
-    // Search Supabase
-    const { data: matches, error } =
-      await supabase.rpc(
-        "match_documents",
-        {
-          query_embedding:
-            queryEmbedding,
-          match_count: 5,
-        }
-      );
-
-    if (error) {
-      console.error(error);
-
-      return NextResponse.json(
-        {
-          answer:
-            "Database search failed",
-        }
-      );
-    }
-
-    const context =
-      matches
-        ?.map(
-          (m: any) => m.content
-        )
-        .join("\n\n") || "";
 
     const model =
       genAI.getGenerativeModel({
