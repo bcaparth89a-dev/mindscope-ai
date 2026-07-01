@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MindScope AI 🧠
 
-## Getting Started
+MindScope AI is an advanced AI-powered psychology and self-improvement assistant designed to provide direct, honest, and actionable insights. Built with **Next.js 16**, **Tailwind CSS**, **Supabase**, and **Google Gemini**, the application acts as a "Reality Mirror" to guide users through relationship counseling, confidence building, rejection recovery, and emotional reasoning.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Deployment
+You can access the live version of the application here:
+👉 **[Live Vercel Deployment Link](https://mind-scope-ai.vercel.app)**
+
+---
+
+## ✨ Key Features
+- **MindHeart AI Engine**: A specialized AI personality focused on psychological patterns, accountability, truth over comfort, and emotional intelligence.
+- **RAG (Retrieval-Augmented Generation)**: Uses a local knowledge base (`data/knowledge-base.txt`) processed via LangChain splitters to answer user queries with customized, contextual information.
+- **Multilingual Recognition**: Automatically detects and responds in **English**, **Hindi**, **Gujarati**, and **Hinglish** naturally.
+- **Supabase Authentication**: Secure user registration, login, and session preservation.
+- **Chat Management**: Multi-chat sidebar enabling users to create, delete, and switch between multiple conversations seamlessly.
+- **Premium Sleek UI**: Features an immersive dark mode theme, responsive layout, smooth interactive sidebar, animated SplashScreen, and AppLoader transitions.
+
+---
+
+## 🛠️ Technology Stack
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Database & Auth**: [Supabase](https://supabase.com/)
+- **AI Model**: [Google Gemini 2.5 Flash](https://ai.google.dev/)
+- **Text Processing**: [LangChain](https://www.langchain.com/)
+- **Styling**: Tailwind CSS & Lucide Icons
+
+---
+
+## 📦 How to Proceed with the Application
+
+### 1. Prerequisites & Environment Variables
+Create a `.env.local` file in the root directory and add the following keys:
+
+```env
+# Gemini API Key
+GEMINI_API_KEY=your_gemini_api_key
+
+# Supabase Keys (Public and Private)
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_KEY=your_supabase_service_role_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Database Schema Setup
+Ensure your Supabase project contains the following tables:
+- **`chats`**:
+  - `id`: uuid (Primary Key)
+  - `user_id`: uuid (References auth.users)
+  - `title`: text
+  - `created_at`: timestamptz
+- **`messages`**:
+  - `id`: uuid (Primary Key)
+  - `chat_id`: uuid (References chats)
+  - `content`: text
+  - `role`: text (e.g., 'user', 'model')
+  - `created_at`: timestamptz
+- **`documents`**:
+  - `id`: bigint (Primary Key)
+  - `content`: text
+  - `metadata`: jsonb
+  - `created_at`: timestamptz
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Embed Knowledge Base
+To seed/embed your documents and knowledge base data into Supabase, run the embed script:
+```bash
+npm run embed
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Run Locally
+Install dependencies and run the Next.js development server:
+```bash
+npm install
+```
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view and test the application locally.
