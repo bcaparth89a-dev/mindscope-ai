@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { supabase } from "@/lib/supabase";
+import { useRouter } from "next/navigation";
 import { 
   Send, 
   Sparkles, 
@@ -16,7 +17,8 @@ import {
   TrendingUp,
   MessageSquare,
   ChevronRight,
-  Info
+  Info,
+  LogOut
 } from "lucide-react";
 
 type Message = {
@@ -40,11 +42,18 @@ interface RealityMirrorBlocks {
 }
 
 export function Chatbot({ currentChatId }: ChatbotProps) {
+  const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.replace("/login");
+    router.refresh();
+  };
 
   // Suggested prompts
   const suggestions = [
@@ -253,16 +262,42 @@ export function Chatbot({ currentChatId }: ChatbotProps) {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[120px] rounded-full bg-violet-600/5 blur-[80px] pointer-events-none" />
 
       {/* Top Navigation / Title bar */}
-      <header className="border-b border-white/5 px-6 py-4 flex items-center justify-between shrink-0 bg-white/[0.01] backdrop-blur-md z-10">
+      <header className="hidden md:flex border-b border-white/5 px-6 py-4 items-center justify-between shrink-0 bg-white/[0.01] backdrop-blur-md z-10">
         <div className="flex items-center gap-2">
           <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="text-xs font-semibold text-indigo-200/60 uppercase tracking-widest font-display">
             MindScope Core Engine v2.0
           </span>
         </div>
-        <div className="flex items-center gap-1.5 text-xs text-indigo-300/40 bg-white/5 border border-white/5 px-3 py-1 rounded-full font-medium">
-          <Sparkles className="h-3 w-3 text-violet-400" />
-          <span>Reality Mirror Active</span>
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 text-xs text-indigo-300/40 bg-white/5 border border-white/5 px-3 py-1 rounded-full font-medium">
+            <Sparkles className="h-3 w-3 text-violet-400" />
+            <span>Reality Mirror Active</span>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              rounded-lg
+              border
+              border-white/5
+              bg-white/5
+              text-indigo-200/50
+              hover:bg-red-500/10
+              hover:border-red-500/20
+              hover:text-red-400
+              transition-all
+              active:scale-[0.9]
+              cursor-pointer
+            "
+            title="Sign out"
+          >
+            <LogOut size={16} />
+          </button>
         </div>
       </header>
 

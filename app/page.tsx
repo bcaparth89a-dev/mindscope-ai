@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, LogOut } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
 import { Chatbot } from "./components/Chatbox";
 import Sidebar from "./components/Sidebar";
@@ -10,6 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useChats } from "@/hooks/useChats";
 
 export default function Home() {
+  const router = useRouter();
   const { user, loading } = useAuth();
 
   const [currentChatId, setCurrentChatId] =
@@ -18,8 +21,34 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] =
     useState(false);
 
-  const { chats, createChat } =
+  const { chats, createChat, loading: chatsLoading } =
     useChats(user?.id);
+
+  // Redirect new/unauthenticated users to the register page
+  useEffect(() => {
+    if (!loading && !user) {
+      router.replace("/register");
+    }
+  }, [user, loading, router]);
+
+  // Auto-select or auto-create chat
+  useEffect(() => {
+    if (!user || chatsLoading) return;
+
+    if (chats.length > 0) {
+      if (!currentChatId) {
+        setCurrentChatId(chats[0].id);
+      }
+    } else {
+      const autoCreate = async () => {
+        const chat = await createChat();
+        if (chat) {
+          setCurrentChatId(chat.id);
+        }
+      };
+      autoCreate();
+    }
+  }, [user, chats, chatsLoading, currentChatId, createChat]);
 
   const handleNewChat = async () => {
     const chat = await createChat();
@@ -30,7 +59,13 @@ export default function Home() {
     }
   };
 
-  if (loading) {
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.replace("/login");
+    router.refresh();
+  };
+
+  if (loading || !user) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background">
         <div className="text-center">
@@ -90,7 +125,30 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="w-9" />
+        <button
+          onClick={handleLogout}
+          className="
+            flex
+            h-9
+            w-9
+            items-center
+            justify-center
+            rounded-lg
+            border
+            border-white/5
+            bg-white/5
+            text-indigo-200/50
+            hover:bg-red-500/10
+            hover:border-red-500/20
+            hover:text-red-400
+            transition-all
+            active:scale-[0.9]
+            cursor-pointer
+          "
+          title="Sign out"
+        >
+          <LogOut size={16} />
+        </button>
       </header>
 
       {/* Layout */}
